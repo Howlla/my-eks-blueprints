@@ -12,7 +12,7 @@ export default class ClusterConstructor extends Construct {
         const blueprint = blueprints.EksBlueprint.builder()
         .account(account)
         .region(region)
-        .addOns(new blueprints.ClusterAutoScalerAddOn)
+        .addOns()
         .teams()
         .build(scope,id+"-stack");
     }
